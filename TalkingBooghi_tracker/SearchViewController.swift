@@ -85,6 +85,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
                 cell.badgeThree.layer.borderColor = UIColor(red: 255/255.0, green: 59/255.0, blue: 48/255.0, alpha: 1).cgColor
                 cell.badgeThree.backgroundColor = UIColor(red: 255/255.0, green: 59/255.0, blue: 48/255.0, alpha: 0.05)
             }
+            cell.badgeFour.text = element.interventiontype
             cell.descriptionField.text = element.description
             cell.dateLabel.text = cellDate?.timeAgoSinceNow
             cell.delegate = self
@@ -109,6 +110,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
                 cell.badgeThree.layer.borderColor = UIColor(red: 255/255.0, green: 59/255.0, blue: 48/255.0, alpha: 1).cgColor
                 cell.badgeThree.backgroundColor = UIColor(red: 255/255.0, green: 59/255.0, blue: 48/255.0, alpha: 0.05)
             }
+            cell.badgeFour.text = element.interventiontype
             cell.descriptionField.text = element.description
             cell.dateLabel.text = cellDate?.timeAgoSinceNow
             if searchArray[indexPath.item].creator == "부모" {
@@ -138,6 +140,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
                 cell.badgeThree.layer.borderColor = UIColor(red: 255/255.0, green: 59/255.0, blue: 48/255.0, alpha: 1).cgColor
                 cell.badgeThree.backgroundColor = UIColor(red: 255/255.0, green: 59/255.0, blue: 48/255.0, alpha: 0.05)
             }
+            cell.badgeFour.text = element.interventiontype
             cell.descriptionField.text = element.description
             cell.dateLabel.text = cellDate?.timeAgoSinceNow
             return cell
@@ -155,6 +158,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
                 cell.badgeThree.layer.borderColor = UIColor(red: 255/255.0, green: 59/255.0, blue: 48/255.0, alpha: 1).cgColor
                 cell.badgeThree.backgroundColor = UIColor(red: 255/255.0, green: 59/255.0, blue: 48/255.0, alpha: 0.05)
             }
+            cell.badgeFour.text = element.interventiontype
             cell.descriptionField.text = element.description
             cell.dateLabel.text = cellDate?.timeAgoSinceNow
             if searchArray[indexPath.item].creator == "부모" {

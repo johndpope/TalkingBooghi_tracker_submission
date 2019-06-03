@@ -32,6 +32,14 @@ class DoneSearchTableViewCell: UITableViewCell {
             badgeThree.clipsToBounds = true
         }
     }
+    @IBOutlet weak var badgeFour: UILabel! {
+        didSet {
+            badgeFour.layer.cornerRadius = 5
+            badgeFour.layer.borderColor = UIColor(red: 0/255.0, green: 122/255.0, blue: 255/255.0, alpha: 1).cgColor
+            badgeFour.layer.borderWidth = 0.5
+            badgeFour.clipsToBounds = true
+        }
+    }
     @IBOutlet weak var doneImage: UIImageView!
     @IBOutlet weak var creatorImage: UIImageView!
     

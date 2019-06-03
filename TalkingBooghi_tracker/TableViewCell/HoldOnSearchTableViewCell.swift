@@ -32,6 +32,14 @@ class HoldOnSearchTableViewCell: UITableViewCell {
             badgeThree.clipsToBounds = true
         }
     }
+    @IBOutlet weak var badgeFour: UILabel! {
+        didSet {
+            badgeFour.layer.cornerRadius = 5
+            badgeFour.layer.borderColor = UIColor(red: 255/255.0, green: 149/255.0, blue: 0/255.0, alpha: 1).cgColor
+            badgeFour.layer.borderWidth = 0.5
+            badgeFour.clipsToBounds = true
+        }
+    }
     @IBOutlet weak var creatorImage: UIImageView!
     @IBOutlet weak var dateLabel: UILabel!
     
