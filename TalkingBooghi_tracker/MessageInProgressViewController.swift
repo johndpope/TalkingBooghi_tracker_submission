@@ -15,6 +15,8 @@ class MessageInProgressViewController: MessagesViewController {
     
     var db: Firestore!
     
+    var timer: Timer?
+    
     var messages: [Message] = []
     var meMember: Member!
     var againstMember: Member!
@@ -73,11 +75,18 @@ class MessageInProgressViewController: MessagesViewController {
         if let stt = intervention?.status {
             setButtons(type: stt)
         }
+        
+        
+        timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true, block: { (timer) in
+            self.fetchMessage(path: self.path)
+            print("fetched")
+        })
 
     }
     override func viewWillAppear(_ animated: Bool) {
     }
     override func viewWillDisappear(_ animated: Bool) {
+        self.timer?.invalidate()
     }
     
     private func makeButton(_ type: Int) -> InputBarButtonItem {

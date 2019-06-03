@@ -14,6 +14,7 @@ class MessageTotalViewController: UIViewController {
     var path = String()
     var intervention: Intervention?
     
+    
     let conversationViewController = MessageInProgressViewController()
     
     /// Required for the `MessageInputBar` to be visible
@@ -37,6 +38,7 @@ class MessageTotalViewController: UIViewController {
         conversationViewController.didMove(toParentViewController: self)
         
         title = intervention?.description
+        
     }
     
     override func viewDidLayoutSubviews() {
